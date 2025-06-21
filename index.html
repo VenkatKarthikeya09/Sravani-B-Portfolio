@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahurothu Sravani - Data Analyst & Developer</title>
+    <meta name="description" content="Data Analyst & Python Developer crafting innovative data solutions and insights">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-text">🌟</span>
+                <div class="logo-animation"></div>
+            </div>
+            <div class="loading-text">Loading Experience...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle-container">
+        <div class="theme-tooltip">Click me for a change!</div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+            <div class="toggle-track">
+                <div class="toggle-thumb">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🌟</span>
+                <span class="logo-text">Sravani Bahurothu</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#portfolio" class="nav-link" data-section="portfolio">Projects</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Elements -->
+    <div class="bg-particles" id="bg-particles"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-intro">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-name">
+                        <span class="name-part">Sravani</span>
+                        <span class="name-part">Bahurothu</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                </div>
+                
+                <p class="hero-description">
+                    Experienced Data Analyst with expertise in Python, SQL, and Power BI. Transforming complex data into 
+                    actionable insights and creating innovative solutions for data-driven decision making.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-social">
+                    <a href="#" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:sravani.bahurothu@gmail.com" class="social-link" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link" data-tooltip="Portfolio">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <div class="image-overlay"></div>
+                        <div class="tech-stack-visual">
+                            <div class="tech-item" data-tech="Python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-item" data-tech="SQL">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="tech-item" data-tech="Power BI">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="tech-item" data-tech="Excel">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="tech-item" data-tech="Analytics">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="tech-item" data-tech="Oracle">
+                                <i class="fas fa-server"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="9">0</div>
+                        <div class="stat-label">Months Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">
+                    Passionate about transforming
+                    <span class="highlight">data into insights</span>
+                </h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="about-text">
+                        <p>
+                            As a dedicated Data Analyst at WIPRO, I specialize in creating comprehensive reports using 
+                            Excel, SQL, SSMS, and Power BI. My experience includes handling user incidents and resolving 
+                            complex data-related issues.
+                        </p>
+                        <p>
+                            I have actively collaborated with teams during MS-Fabric migration projects, demonstrating my 
+                            ability to adapt to new technologies and work effectively in challenging environments. My goal 
+                            is to leverage data to drive meaningful business decisions.
+                        </p>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-pie"></i>
+                                <div>
+                                    <h4>Data Analysis</h4>
+                                    <p>Expert in extracting insights from complex datasets</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h4>Problem Solving</h4>
+                                    <p>Resolving data issues and optimizing processes</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Team Collaboration</h4>
+                                    <p>Working effectively in cross-functional teams</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="about-image">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="code-title">data_analysis.py</span>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line">
+                                    <span class="line-number">1</span>
+                                    <span class="code-text">
+                                        <span class="keyword">import</span> <span class="variable">pandas</span> <span class="keyword">as</span> <span class="variable">pd</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">2</span>
+                                    <span class="code-text">
+                                        <span class="keyword">import</span> <span class="variable">numpy</span> <span class="keyword">as</span> <span class="variable">np</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">3</span>
+                                    <span class="code-text">
+                                        <span class="keyword">from</span> <span class="variable">sqlalchemy</span> <span class="keyword">import</span> <span class="variable">create_engine</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">4</span>
+                                    <span class="code-text">
+                                        
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">5</span>
+                                    <span class="code-text">
+                                        <span class="keyword">def</span> <span class="method">analyze_data</span>(<span class="variable">dataset</span>):
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">6</span>
+                                    <span class="code-text">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">insights</span> = <span class="variable">dataset</span>.<span class="method">describe</span>()
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">7</span>
+                                    <span class="code-text">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="variable">insights</span>
+                                    </span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">8</span>
+                                    <span class="code-text">
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">
+                    Technologies I work with
+                </h2>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category" data-category="frontend">
+                        <div class="category-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="95">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>React</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="95"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fab fa-vue"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Vue.js</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="85"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="92">
+                                <div class="skill-icon">
+                                    <i class="fab fa-sass"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>CSS/Sass</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="92"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-category="backend">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Node.js</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="80">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="80"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>MongoDB</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="85"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="75">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>AWS</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="75"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-category="design">
+                        <div class="category-header">
+                            <i class="fas fa-palette"></i>
+                            <h3>Design & Tools</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="90">
+                                <div class="skill-icon">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Figma</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fab fa-adobe"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Adobe CC</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="85"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="88">
+                                <div class="skill-icon">
+                                    <i class="fab fa-sketch"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Sketch</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="92">
+                                <div class="skill-icon">
+                                    <i class="fas fa-magic"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>UI/UX</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-percent="92"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+                <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-filter="reporting">Reporting</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="machine-learning python">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" alt="Leukemia Detection">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Leukemia Detection in White Blood Cells</h3>
+                                <p>Advanced segmentation algorithm for detecting leukemia in white blood cells and finding texture features from classification and stage of leukemia</p>
+                                <div class="portfolio-tech">
+                                    <span>Python</span>
+                                    <span>OpenCV</span>
+                                    <span>Machine Learning</span>
+                                    <span>Image Processing</span>
+                                    <span>Segmentation Algorithm</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="embedded">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop" alt="Photo Resistor System">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Photo Resistor using ATMEGA328P</h3>
+                                <p>The main objective of the photo resistor is it decrease with increasing incident light intensity. Gained experience working with real-time projects and reaching targets in time</p>
+                                <div class="portfolio-tech">
+                                    <span>ATMEGA328P</span>
+                                    <span>C Language</span>
+                                    <span>Embedded Systems</span>
+                                    <span>Sensors</span>
+                                    <span>Real-time Systems</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Hardware Demo">
+                                    <i class="fas fa-microchip"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="data-analysis reporting">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Power BI Dashboard">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Business Intelligence Dashboard</h3>
+                                <p>Comprehensive Power BI reports for business analytics and performance tracking with interactive visualizations</p>
+                                <div class="portfolio-tech">
+                                    <span>Power BI</span>
+                                    <span>SQL</span>
+                                    <span>Excel</span>
+                                    <span>Data Modeling</span>
+                                    <span>SSMS</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Dashboard">
+                                    <i class="fas fa-chart-bar"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Download Report">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="reporting data-analysis">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="SSMS Reports">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Automated SSMS Reporting System</h3>
+                                <p>SSMS-based automated report generation with incident tracking and resolution for business intelligence</p>
+                                <div class="portfolio-tech">
+                                    <span>SSMS</span>
+                                    <span>SQL Server</span>
+                                    <span>RDL Reports</span>
+                                    <span>Automation</span>
+                                    <span>Excel</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Reports">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Documentation">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="data-analysis">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="MS Fabric Migration">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>MS Fabric Migration Project</h3>
+                                <p>Led collaborative team effort for seamless data platform migration to Microsoft Fabric with stakeholder coordination</p>
+                                <div class="portfolio-tech">
+                                    <span>MS Fabric</span>
+                                    <span>Data Migration</span>
+                                    <span>Team Collaboration</span>
+                                    <span>SQL</span>
+                                    <span>Power BI</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="Case Study">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Migration Guide">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="data-analysis python">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Python Data Analysis">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Python Data Analysis Platform</h3>
+                                <p>Python-based data analysis platform with automated insights, Oracle database integration, and visualization capabilities</p>
+                                <div class="portfolio-tech">
+                                    <span>Python</span>
+                                    <span>Oracle Database</span>
+                                    <span>Pandas</span>
+                                    <span>Data Analysis</span>
+                                    <span>Visualization</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Code">
+                                    <i class="fab fa-python"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="data-analysis">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Excel Analytics">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Advanced Excel Analytics</h3>
+                                <p>Complex Excel-based analytics solutions with advanced formulas, pivot tables, and data visualization for business insights</p>
+                                <div class="portfolio-tech">
+                                    <span>MS Excel</span>
+                                    <span>Advanced Formulas</span>
+                                    <span>Pivot Tables</span>
+                                    <span>Data Visualization</span>
+                                    <span>MS Word</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View Workbook">
+                                    <i class="fas fa-file-excel"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Templates">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="data-analysis">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Incident Management">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Incident Management System</h3>
+                                <p>Comprehensive incident tracking and resolution system for data-related issues with automated reporting and escalation</p>
+                                <div class="portfolio-tech">
+                                    <span>Incident Management</span>
+                                    <span>RDL Reports</span>
+                                    <span>SQL</span>
+                                    <span>Process Optimization</span>
+                                    <span>Documentation</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link" data-tooltip="View System">
+                                    <i class="fas fa-tools"></i>
+                                </a>
+                                <a href="#" class="portfolio-link" data-tooltip="Process Flow">
+                                    <i class="fas fa-sitemap"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">
+                    Professional Experience
+                </h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2024 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-company">
+                            <h3>Project Engineer - Data Analyst</h3>
+                            <h4>WIPRO Technologies</h4>
+                        </div>
+                        <p><strong>9 months of experience</strong> in data analysis and reporting. Specialized in creating comprehensive business intelligence solutions and managing data-driven projects.</p>
+                        <div class="timeline-responsibilities">
+                            <div class="responsibility-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Worked on creating reports using Excel, SQL, SSMS, and Power BI Reports</span>
+                            </div>
+                            <div class="responsibility-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Handled incidents raised by users and resolved issues in related reports and RDLs</span>
+                            </div>
+                            <div class="responsibility-item">
+                                <i class="fas fa-users"></i>
+                                <span>Actively collaborated with teammates and leads during the MS-Fabric migration</span>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <span>Excel</span>
+                            <span>SQL</span>
+                            <span>SSMS</span>
+                            <span>Power BI</span>
+                            <span>MS Fabric</span>
+                            <span>RDL Reports</span>
+                            <span>Incident Management</span>
+                            <span>Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-content">
+                        <div class="timeline-company">
+                            <h3>B.Tech in Engineering</h3>
+                            <h4>Sri Vasavi Engineering College, Tadepalligudem</h4>
+                        </div>
+                        <p>Completed Bachelor of Technology with a CGPA of 7.30. Specialized in engineering fundamentals with focus on programming, embedded systems, and data analysis. Worked on innovative projects including leukemia detection and embedded systems development.</p>
+                        <div class="timeline-skills">
+                            <span>Python Programming</span>
+                            <span>C Language</span>
+                            <span>Data Structures</span>
+                            <span>Embedded Systems</span>
+                            <span>Machine Learning</span>
+                            <span>Image Processing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <div class="timeline-company">
+                            <h3>Intermediate Education</h3>
+                            <h4>Sri Chaitanya College</h4>
+                        </div>
+                        <p>Completed intermediate education with 84.9% marks. Built strong foundation in mathematics, physics, and chemistry, developing analytical thinking and problem-solving skills that form the basis of my current technical expertise.</p>
+                        <div class="timeline-skills">
+                            <span>Mathematics</span>
+                            <span>Physics</span>
+                            <span>Chemistry</span>
+                            <span>Analytical Thinking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">
+                    Let's create something
+                    <span class="highlight">amazing together</span>
+                </h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>sravani.bahurothu@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 9014649480</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>1-44/1/A Hanumanthu vari Street near Kondayya tank, Tadepalligudem, West Godavari, AP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Connect With Me</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:sravani.bahurothu@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌟</span>
+                    <span class="logo-text">Sravani Bahurothu</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:sravani.bahurothu@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sravani Bahurothu. All rights reserved.</p>
+                <p>Designed & Developed with <i class="fas fa-heart"></i> by Sravani Bahurothu</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
